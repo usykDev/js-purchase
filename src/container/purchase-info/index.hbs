@@ -1,0 +1,77 @@
+<main class="main">
+	{{#with data}}
+	<div class="form-card">
+		{{>heading title="Order information"}}
+
+		<div class='purchase-item__block'>
+			<span class='title'>ID:</span>
+			<span class='text'>{{id}}</span>
+		</div>
+
+		{{>divider}}
+
+
+		<div class="purchase-item__block__2columnns">
+			<div class='purchase-item__block'>
+				<span class='title'>Name:</span>
+				<span class='text'>{{firstname}}</span>
+			</div>
+
+			<div class='purchase-item__block'>
+				<span class='title'>Last name:</span>
+				<span class='text'>{{lastname}}</span>
+			</div>
+
+			<div class='purchase-item__block'>
+				<span class='title'>Phone number:</span>
+				<span class='text'>{{phone}}</span>
+			</div>
+
+			<div class='purchase-item__block'>
+				<span class='title'>Email:</span>
+				<span class='text'>{{email}}</span>
+			</div>
+		</div>
+
+		{{>divider}}
+
+		<div class='purchase-item__block'>
+			<span class='title'>Product name:</span>
+			<span class='text'>{{product.title}}</span>
+		</div>
+
+		<div class='purchase-item__block'>
+			<span class='title'>Comment:</span>
+			<span class='text'>{{comment}}</span>
+		</div>
+
+		{{>divider}}
+
+		<div class="purchase-item__block__2columnns">
+
+			<div class='purchase-item__block'>
+				<span class='title'>Price:</span>
+				<span class='text'>{{productPrice}}</span>
+			</div>
+
+			<div class='purchase-item__block'>
+				<span class='title'>Delivery price:</span>
+				<span class='text'>{{deliveryPrice}}</span>
+			</div>
+
+			<div class='purchase-item__block'>
+				<span class='title'>Total price:</span>
+				<span class='text'>{{totalPrice}}</span>
+			</div>
+
+			<div class='purchase-item__block'>
+				<span class='title'>Bonuses:</span>
+				<span class='text'>{{bonus}}</span>
+			</div>
+
+		</div>
+		{{>divider}}
+		<a href="/purchase-update?id={{id}}">{{>button text="Edit purchase"}}</a>
+	</div>
+	{{/with}}
+</main>

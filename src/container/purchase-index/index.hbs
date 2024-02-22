@@ -1,0 +1,9 @@
+<main class="main">
+	{{> heading title="Items" info="Computers and laptops/Computers, nettops, monoblocs"}}
+
+	<div class="product-list">
+		{{#each data.list}}
+		{{> index-products data=this}}
+		{{/each}}
+	</div>
+</main>

@@ -1,0 +1,27 @@
+@use '../../lib/service.scss' as s;
+
+
+.heading__card {
+	@include s.blur;
+
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	
+	border-radius: 10px;
+	box-shadow: 0px 0px 8px #d5d3d3;
+	padding: s.space(4);
+}
+
+.heading__title {
+	font-size: 26px;
+	font-weight: 500;
+	color: #000;
+	width: fit-content;
+}
+
+.heading__info {
+	font-size: 20px;
+	color: #000;
+	width: fit-content;	
+}

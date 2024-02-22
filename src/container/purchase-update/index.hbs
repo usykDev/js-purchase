@@ -1,0 +1,26 @@
+<main class="main">
+
+	{{#with data}}
+	<form method="POST" action="/purchase-update?id={{id}}" class="form-card">
+		{{>heading title="Editing of personal data"}}
+
+		<div class='purchase-item__block'>
+			<span class='title'>ID:</span>
+			<span class='text'>{{id}}</span>
+		</div>
+
+		<div class="purchase-item__block__2columnns">
+			{{>field label="Last name" name="lastname"}}
+
+			{{>field label="Name" name="firstname"}}
+
+
+			{{>field label="Email" name="email"}}
+			{{>field label="Phone number" name="phone"}}
+
+		</div>
+
+		{{>button text="Save changes"}}
+	</form>
+	{{/with}}
+</main>

@@ -1,0 +1,45 @@
+<main class="main">
+	{{> heading title="My order"}}
+
+	{{#with data.purchases}}
+	{{#if list}}
+	<section class="product-list">
+		<div class="product-item">
+			{{#each list}}
+
+			<a href='/purchase-info?id={{id}}'>
+				<div class='purchase-item'>
+					<div class='purchase-item__block'>
+						<span class='title'>ID: {{id}}</span>
+					</div>
+					<div class='purchase-item__block'>
+						<span class='title'>Items</span>
+						<span class='text'>{{product.title}}</span>
+					</div>
+					<div class='purchase-item__block'>
+						<span class='title'>Total price</span>
+						<span class='text'>{{totalPrice}} $</span>
+					</div>
+					<div class='purchase-item__block'>
+						<span class='title'>Bonuses</span>
+						<span class='text'>{{bonus}} $</span>
+					</div>
+				</div>
+			</a>
+
+
+			{{> divider}}
+			{{/each}}
+		</div>
+	</section>
+	{{/if}}
+
+	{{#unless list}}
+	<section class="product-list--not-found">
+		Items not found
+	</section>
+
+	{{/unless}}
+	{{/with}}
+
+</main>

@@ -1,0 +1,144 @@
+@use '../../lib/service.scss' as s;
+
+@use '../../component/heading/style.scss' as heading;
+@use '../../component/purchase-product/style.scss' as purchaseProduct;
+@use '../../component/field/style.scss' as field;
+@use '../../component/divider/style.scss' as divider;
+@use '../../component/button/style.scss' as button;
+
+@mixin click {
+	cursor: pointer;
+	transition: opacity 0.7s;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.product-section{
+	display: flex;
+
+    padding: 40px 40px;
+}
+
+.product-info {
+	@include s.blur;
+
+	display: flex;
+	flex-direction: column;
+	gap: s.space(4);
+	align-items: flex-start;
+	max-width: 400px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.product-info .product-card {
+	width: 330px;
+}
+
+.image__place {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	background-color: s.color(white);
+}
+
+.product {
+	position: relative;
+	overflow: hidden;
+	padding: 0 40px;
+}
+
+.product-list {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+}
+
+.product-list::-webkit-scrollbar {
+    display: none;
+}
+
+
+.pre-btn,
+.nxt-btn {
+	@include click;
+
+	position: absolute;
+	height: 32px;
+	width: 32px;
+	background-color: white;
+	box-shadow: 0px 0px 8px #d5d3d3;
+	opacity: 0.4;
+	border-radius: 32px;
+	top: calc(50% - (32px / 2));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	z-index: 9;
+}
+
+.pre-btn {
+	left: 0;
+	transform: rotate(180deg);
+}
+
+.nxt-btn {
+	right: 0;
+}
+
+.product-info {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	width: 100%;
+	gap: s.space(4);
+	padding: s.space(4);
+	box-shadow: 0px 0px 8px s.color(light);
+	border-radius: 15px;
+
+&__title {
+	font-size: s.size(default);
+	font-weight: bold;
+}
+
+&__image {
+	max-width: 350px;
+	width: 100%;
+	max-height: 350px;
+	height: 100%;
+}
+
+&__category {
+	padding: 5px 10px;
+	border-radius:  30px;
+	font-size: 14px;
+	color: s.color(dark);
+	border: 1px solid transparent;
+}
+
+&__category--1 {
+	border-color: blue ;
+	color: blue ;
+}
+
+&__category--2 {
+	border-color: green ;
+	color: green;
+}
+}
+
+.product-info__button {
+	background-color: s.color(blue);
+	padding: s.space(2);
+	border-radius: 5px;
+
+	text-decoration: none;
+	color: s.color(white);
+
+}

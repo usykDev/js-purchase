@@ -1,0 +1,13 @@
+@use '../../lib/service.scss' as s;
+
+@use '../../component/heading/style.scss' as heading;
+@use '../../component/purchase-product/style.scss' as purchaseProduct;
+@use '../../component/button/style.scss' as button;
+
+
+.product-list {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: s.space(5);
+}

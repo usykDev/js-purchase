@@ -1,6 +1,17 @@
-
+@use '../../lib/service.scss' as s;
 
 body {
 	font-family: 'Roboto', sans-serif;
 	padding: 100px;
+	background: url('/img/ecommerce1.jpg') fixed;
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(10);
+	padding: 0 s.space(20);
 }
