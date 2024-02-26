@@ -3,7 +3,7 @@
 .card {
 	@include s.blur;
 
-	box-shadow: 0px 0px 8px #d5d3d3;
+	box-shadow: 0px 0px 5px #232323;
 	padding: s.space(4);
 	display: flex;
 	flex-direction: column;
@@ -69,6 +69,8 @@
 	display: flex;
 	flex-direction: row;
 	width: 100%;
+	min-height: 280px;
+
 	justify-content: center;
 }
 

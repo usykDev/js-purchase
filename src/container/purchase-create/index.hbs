@@ -1,7 +1,7 @@
 <main class="main">
 	{{#with data}}
 	<form method="POST" action="/purchase-submit?id={{id}}" class="form-card">
-		{{>heading title="Your order"}}
+		{{>heading-dark title="Your order"}}
 
 		<ul class="cart">
 			{{#each cart}}
@@ -14,7 +14,7 @@
 
 		{{>divider}}
 
-		{{>heading title="Checkout"}}
+		{{>heading-dark title="Checkout"}}
 
 		{{>field label="Name" name="firstname"}}
 

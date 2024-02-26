@@ -1,7 +1,7 @@
 <main class="main">
 	{{#with data}}
 	<div class="form-card">
-		{{>heading title="Order information"}}
+		{{>heading-dark title="Order information"}}
 
 		<div class='purchase-item__block'>
 			<span class='title'>ID:</span>
@@ -71,7 +71,7 @@
 
 		</div>
 		{{>divider}}
-		<a href="/purchase-update?id={{id}}">{{>button text="Edit purchase"}}</a>
+		<a href="/purchase-update?id={{id}}">{{>button text="Edit personal data"}}</a>
 	</div>
 	{{/with}}
 </main>

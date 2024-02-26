@@ -6,19 +6,7 @@ const { Purchase } = require('../class/purchase')
 const { Promocode } = require('../class/promocode')
 
 Product.add(
-  '/img/bundle.jpg',
-  `Bundle HP PC Pro 290 G9 & HP Monitor E24 G5 24"`,
-  `Windows 11 Pro, Intel Core i5, 16 GB, Intel® UHD Graphics 730`,
-  [
-    { id: 1, text: 'Ready for shipping' },
-    { id: 2, text: 'Top sales' },
-  ],
-  958,
-  10,
-)
-
-Product.add(
-  '/img/jupiter.jpg',
+  '/img/jupiter.png',
   `Jupiter One 537 Custom Gaming PC Build`,
   `Windows 11, Intel Core i3, 16 GB, Gigabyte GeForce RTX 3050 Windforce OC 8GB`,
   [{ id: 2, text: 'Top sales' }],
@@ -37,7 +25,7 @@ Product.add(
 )
 
 Product.add(
-  '/img/proone.jpg',
+  '/img/proone.png',
   `HP All-In-One ProOne 440 G9 PC (885J9EA)`,
   `Windows 11 Pro, Intel® Core™ i5-12500T, 8 GB, Intel® UHD Graphics 770`,
   [{ id: 1, text: 'Ready for shipping' }],
@@ -46,7 +34,7 @@ Product.add(
 )
 
 Product.add(
-  '/img/elitedesk.jpg',
+  '/img/elitedesk.png',
   `HP EliteDesk 800 G3 USFF USED Premium Quality`,
   `Windows 10 Pro, Intel Core i5, 8 GB, Intel® HD Graphics 530`,
   [
@@ -58,7 +46,19 @@ Product.add(
 )
 
 Product.add(
-  '/img/omen.jpg',
+  '/img/bundle.png',
+  `Bundle HP PC Pro 290 G9 & HP Monitor E24 G5 24"`,
+  `Windows 11 Pro, Intel Core i5, 16 GB, Intel® UHD Graphics 730`,
+  [
+    { id: 1, text: 'Ready for shipping' },
+    { id: 2, text: 'Top sales' },
+  ],
+  958,
+  10,
+)
+
+Product.add(
+  '/img/omen.png',
   `HP OMEN 40L Desktop GT21-1006nv Gaming PC ( 7Z504EA )`,
   `Windows 11, AMD Ryzen™ 7, 32 GB, NVIDIA® GeForce RTX™ 3070 Ti 8GB`,
   [
@@ -70,7 +70,7 @@ Product.add(
 )
 
 Product.add(
-  '/img/lenovo.jpg',
+  '/img/lenovo.png',
   `Lenovo PC ThinkCentre neo 50q G4 Tiny SFF`,
   `Windows 11 Pro, Intel Core i5, 16 GB, Intel UHD Graphics 730`,
   [{ id: 1, text: 'Top sales' }],
@@ -79,7 +79,7 @@ Product.add(
 )
 
 Product.add(
-  '/img/ideacentre.jpg',
+  '/img/ideacentre.png',
   `Lenovo IdeaCentre AIO 3 PC 21.5"`,
   `Windows 11, AMD Ryzen™ 3 3250U, 8 GB, AMD Radeon™ Graphics`,
   [{ id: 1, text: 'Ready for shipping' }],
@@ -158,6 +158,8 @@ router.post('/purchase-create', function (req, res) {
 
   res.render('purchase-create', {
     name: 'purchase-create',
+
+    component: ['heading-dark'],
 
     data: {
       id: product.id,
@@ -361,6 +363,8 @@ router.get('/purchase-info', function (req, res) {
   res.render('purchase-info', {
     name: 'purchase-info',
 
+    component: ['heading-dark'],
+
     data: {
       id: purchase.id,
       firstname: purchase.firstname,
@@ -397,6 +401,7 @@ router.get('/purchase-update', function (req, res) {
 
   res.render('purchase-update', {
     name: 'purchase-update',
+    component: ['heading-dark'],
     data: {
       id: purchase.id,
       firstname: purchase.firstname,

@@ -1,0 +1,21 @@
+@use '../../lib/service.scss' as s;
+
+
+.heading__card--dark {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(4);
+}
+
+.heading__title--dark {
+	font-size: 28px;
+	font-weight: 500;
+	color: s.color(dark);
+	width: fit-content;
+}
+
+.heading__info--dark {
+	font-size: 22px;
+	color: s.color(dark);
+	width: fit-content;	
+}
