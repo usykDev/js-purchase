@@ -3,10 +3,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	padding: 100px;
-	background: url('/img/ecommerce2.jpg') fixed;
-	background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+	background: radial-gradient(#05A5DF, #1F467F) fixed;
 }
 
 .main {
@@ -14,4 +11,4 @@ body {
 	flex-direction: column;
 	gap: s.space(10);
 	padding: 0 s.space(20);
-}
+	}
